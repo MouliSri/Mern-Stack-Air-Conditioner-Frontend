@@ -15,7 +15,7 @@ const UpdateProfile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:7000/user', { withCredentials: true });
+        const response = await axios.get('https://air-conditioner-backend.onrender.com/user', { withCredentials: true });
         const { name, email, phoneNumber } = response.data;
         setUserData({ name, email, phoneNumber });
       } catch (error) {

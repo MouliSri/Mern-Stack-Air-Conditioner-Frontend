@@ -43,7 +43,7 @@ const Register = () => {
 
           
 
-            const {data}=await axios.post("http://localhost:7000/user/register",user,{withCredentials:true})
+            const {data}=await axios.post("https://air-conditioner-backend.onrender.com/user/register",user,{withCredentials:true})
 
             console.log(data);
 

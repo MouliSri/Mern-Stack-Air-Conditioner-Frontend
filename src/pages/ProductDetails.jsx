@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
       const fetchProductDetails = async () => {
         try {
-          const { data } = await axios.get(`http://localhost:7000/products/${id}`);
+          const { data } = await axios.get(`https://air-conditioner-backend.onrender.com/products/${id}`);
          
           // Update the state with received product data
           setProductDetails(data);
@@ -64,7 +64,7 @@ const ProductDetails = () => {
       };
 
       // Make a GET request to check if the product is already in the cart
-      const {data} = await axios.get(`http://localhost:7000/cart/checkCartItem/${id}`,{withCredentials:true});
+      const {data} = await axios.get(`https://air-conditioner-backend.onrender.com/cart/checkCartItem/${id}`,{withCredentials:true});
 
       
 
@@ -74,7 +74,7 @@ const ProductDetails = () => {
         console.log('Product already exists in the cart');
       } else {
         // If the product is not in the cart, proceed to add it
-        const addResponse = await axios.post('http://localhost:7000/cart/addToCart', {
+        const addResponse = await axios.post('https://air-conditioner-backend.onrender.com/cart/addToCart', {
           cartItems: [newItem],
           user: '' // Replace with the user ID or any user identification information
         },{ withCredentials: true });

@@ -10,7 +10,7 @@ const Cart = () => {
 
   const fetchCartItems = async () => {
     try {
-      const {data} = await axios.get('http://localhost:7000/cart',{
+      const {data} = await axios.get('https://air-conditioner-backend.onrender.com/cart',{
         withCredentials: true
       });
       console.log(data)
@@ -58,7 +58,7 @@ const Cart = () => {
 
   const handleDeleteAllItems = async () => {
     try {
-      await axios.delete('http://localhost:7000/cart/deleteAllCartItems',{withCredentials:true});
+      await axios.delete('https://air-conditioner-backend.onrender.com/cart/deleteAllCartItems',{withCredentials:true});
       setCartItems([]);
     } catch (error) {
       console.error('Error deleting all cart items:', error);

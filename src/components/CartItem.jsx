@@ -31,7 +31,7 @@ const CartItem = ({ item , fetchCartItems,calculateTotalPrice }) => {
   const updateCartItemQuantity = async (itemId, updatedQuantity) => {
     try {
       await axios.put(
-        `http://localhost:7000/cart/updateCartItem/${itemId}`,
+        `https://air-conditioner-backend.onrender.com/cart/updateCartItem/${itemId}`,
         { productquantity: updatedQuantity },
         { withCredentials: true }
       );
@@ -51,7 +51,7 @@ const CartItem = ({ item , fetchCartItems,calculateTotalPrice }) => {
   const handleDeleteItem = async (id) => {
     try {
      
-      await axios.delete(`http://localhost:7000/cart/deleteCartItem/${id}`,{withCredentials:true});
+      await axios.delete(`https://air-conditioner-backend.onrender.com/cart/deleteCartItem/${id}`,{withCredentials:true});
       // After successful deletion, fetch updated cart items
       fetchCartItems();
     } catch (error) {

@@ -20,7 +20,7 @@ const PlaceOrder = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const { data } = await axios.get('http://localhost:7000/cart',{withCredentials:true});
+        const { data } = await axios.get('https://air-conditioner-backend.onrender.com/cart',{withCredentials:true});
         setCartItems(data);
       } catch (error) {
         console.error('Error fetching cart items:', error);
@@ -74,7 +74,7 @@ const PlaceOrder = () => {
 
     try {
     
-      const response = await axios.post('http://localhost:7000/orders/addOrder', orderData,{withCredentials:true});
+      const response = await axios.post('https://air-conditioner-backend.onrender.com/orders/addOrder', orderData,{withCredentials:true});
      
       if(!response){
         console.log("not added")

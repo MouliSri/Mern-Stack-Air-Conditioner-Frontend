@@ -42,7 +42,7 @@ const Login = () => {
 
           try {
 
-            const response=await axios.post("http://localhost:7000/user/login",user,{withCredentials:true})
+            const response=await axios.post("https://air-conditioner-backend.onrender.com/user/login",user,{withCredentials:true})
         
             
           

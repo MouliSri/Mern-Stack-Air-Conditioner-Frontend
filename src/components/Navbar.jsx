@@ -32,7 +32,7 @@ const Navbar = () => {
     const getUser = async () => {
       try {
       
-          const response = await axios.get("http://localhost:7000/user", { withCredentials: true });
+          const response = await axios.get("https://air-conditioner-backend.onrender.com/user", { withCredentials: true });
   
        
           
@@ -74,7 +74,7 @@ const Navbar = () => {
 
   
     try {
-      const response =await axios.post("http://localhost:7000/user/logout",{},{withCredentials:true})
+      const response =await axios.post("https://air-conditioner-backend.onrender.com/user/logout",{},{withCredentials:true})
 
   
       //    console.log(response)

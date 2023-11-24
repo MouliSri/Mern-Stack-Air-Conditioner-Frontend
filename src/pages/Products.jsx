@@ -14,7 +14,7 @@ const Products = () => {
 
       try {
       
-        const {data}=await axios.get("http://localhost:7000/products")
+        const {data}=await axios.get("https://air-conditioner-backend.onrender.com/products")
 
         setDatas(data)
         setIsLoading(false);

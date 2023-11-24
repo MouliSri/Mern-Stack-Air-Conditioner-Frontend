@@ -6,7 +6,7 @@ const Orders = () => {
 
   const fetchOrders = async () => {
     try {
-      const { data } = await axios.get('http://localhost:7000/orders', { withCredentials: true });
+      const { data } = await axios.get('https://air-conditioner-backend.onrender.com/orders', { withCredentials: true });
       setOrders(data);
     } catch (error) {
       console.error('Error fetching orders:', error);

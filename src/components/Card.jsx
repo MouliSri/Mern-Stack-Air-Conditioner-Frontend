@@ -20,7 +20,7 @@ const Card = ({ productData }) => {
       };
 
       // Make a GET request to check if the product is already in the cart
-      const {data} = await axios.get(`http://localhost:7000/cart/checkCartItem/${productData._id}`,{withCredentials:true});
+      const {data} = await axios.get(`https://air-conditioner-backend.onrender.com/cart/checkCartItem/${productData._id}`,{withCredentials:true});
 
      
 
@@ -48,7 +48,7 @@ const Card = ({ productData }) => {
           progress: undefined,
         });
         // If the product is not in the cart, proceed to add it
-        const addResponse = await axios.post('http://localhost:7000/cart/addToCart', {
+        const addResponse = await axios.post('https://air-conditioner-backend.onrender.com/cart/addToCart', {
           cartItems: [newItem],
           user: '' // Replace with the user ID or any user identification information
         },{ withCredentials: true });
